@@ -1,0 +1,152 @@
+{% extends 'meditations/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% block content %}
+<head>
+
+  <h1>Customize Meditation</h1>
+{#    <link href="/meditations/templates/meditations/mindful_style.css" rel="stylesheet">#}
+   <style>
+    body {
+    font-family: Arial, sans-serif;
+      background-color: #D3D3D3;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .meditation-display {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      height: 600px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .meditation-display img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 10px;
+    }
+
+    .meditation-controls {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .meditation-controls button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .meditation-controls button:hover {
+      background-color: #45a049;
+    }
+
+    .meditation-controls input[type="file"] {
+      display: none;
+    }
+
+    .meditation-controls label {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      background-color: #4287f5;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .meditation-quote {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 18px;
+    }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="meditation-display">
+      <!-- Displayed content will be placed here -->
+    </div>
+
+    <div class="meditation-controls">
+      <label for="image-upload">Choose Image</label>
+      <input type="file" id="image-upload">
+
+      <button id="play-button">Play</button>
+      <button id="pause-button">Pause</button>
+    </div>
+
+    <div class="meditation-quote">
+    </div>
+  </div>
+
+  <script>
+    const imageUpload = document.getElementById('image-upload');
+    const meditationDisplay = document.querySelector('.meditation-display');
+    const meditationQuote = document.querySelector('.meditation-quote');
+    const playButton = document.getElementById('play-button');
+    const pauseButton = document.getElementById('pause-button');
+
+    imageUpload.addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function(e) {
+        meditationDisplay.innerHTML = `<img src="${e.target.result}" alt="Meditation Image">`;
+      };
+
+      reader.readAsDataURL(file);
+    });
+
+    playButton.addEventListener('click', function() {
+    });
+
+        pauseButton.addEventListener('click', function() {
+        });
+
+
+    function displayRandomQuote() {
+      const quotes = [
+        "Inhale the present, exhale all that remains.",
+        "Quiet the mind, and the heart will speak.",
+        "Your calm mind is the ultimate weapon against your challenges.",
+        "The present moment is the only moment available to us, and it is the door to all moments.",
+        "Breathe in peace, breathe out stress.",
+        "Wherever you go, there you are.",
+        "Be here now.",
+        "Breathing in, I feel calm. Breathing out, I feel at peace.",
+        "In the midst of movement and chaos, keep stillness inside of you.",
+        "Mindfulness is the basis of all awareness. If we are not mindful, we are not alive."
+      ];
+
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      meditationQuote.textContent = quotes[randomIndex];
+    }
+
+    displayRandomQuote();
+  </script>
+</body>
+
+{% endblock %}
+</html>

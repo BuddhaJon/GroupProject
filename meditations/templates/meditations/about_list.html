@@ -1,0 +1,107 @@
+{% extends 'meditations/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+{% block content %}
+<head>
+  <title>About Us</title>
+  <style>
+    body {
+      background-image: url('/media/images/beach.PNG');
+      font-family: Arial, sans-serif;
+      background-color: #222222;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .person {
+      display: flex;
+      margin-bottom: 20px;
+      background-color: #D3D3D3;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .person img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    .person-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+    }
+
+    .person-name {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .person-title {
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .person-bio {
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>About Us</h1>
+
+  <div class="person">
+    <img src="" alt="Jonathan Rothe">
+    <div class="person-info">
+      <h2 class="person-name">Jonathan Rothe</h2>
+      <p class="person-title">CEO</p>
+      <p class="person-bio">Jonathan is an avid techie with a love for mindfulness, Buddhism, nature, and travel. He is an IT innovation student at UNO as well as a co-founder and the president of the UNO Mindfulness club.</p>
+    </div>
+  </div>
+
+  <div class="person">
+    <img src="person2.jpg" alt="Conner Bryant">
+    <div class="person-info">
+      <h2 class="person-name">Conner Bryant</h2>
+      <p class="person-title">WarHammer</p>
+      <p class="person-bio">Conner is a South Carolina native who thoroughly enjoys relaxing on the beach. </p>
+    </div>
+  </div>
+
+  <div class="person">
+    <img src="person3.jpg" alt="Joe Lemoine">
+    <div class="person-info">
+      <h2 class="person-name">Joe Lemoine</h2>
+      <p class="person-title">Junior Developer</p>
+      <p class="person-bio">Joe is a student at UNO and is working to learn the art of code and web development.He likes turtles.</p>
+    </div>
+  </div>
+
+  <div class="person">
+    <img src="person4.jpg" alt="Andrew Reyes">
+    <div class="person-info">
+      <h2 class="person-name">Andrew Reyes</h2>
+      <p class="person-title">Refresh Button</p>
+      <p class="person-bio">Andrew is a refresh button, not much to say here.</p>
+    </div>
+  </div>
+
+  <div class="person">
+    <img src="person5.jpg" alt="Parker Gornick">
+    <div class="person-info">
+      <h2 class="person-name">Parker Gornick</h2>
+      <p class="person-title">CIO</p>
+      <p class="person-bio">Parker, the Zen master of procrastination enjoys sitting on the ground in peace pondering when he will start his next task than starting his task. But in fact is a co-founder.</p>
+    </div>
+  </div>
+</body>
+{% endblock %}
+
+    </html>

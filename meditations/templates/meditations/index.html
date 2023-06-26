@@ -1,0 +1,55 @@
+{% extends 'meditations/base.html' %}
+<html lang="en">
+{% block content %}
+<head>
+           <h1 style="text-align: center;">Mindful Island Home</h1>
+    <link href="mindful_style.css" rel="stylesheet" >
+</head>
+
+<script>
+
+let audio = document.getElementByID("myAudio")
+
+    function playmusic() {
+        if (audio.paused) {
+            audio.play();
+        }
+        {
+        else
+            audio.pause();
+        }
+    }
+
+</script>
+
+<body>
+<br>
+{#<div style="display: flex; top: 15%; left: 0; justify-content: center; width: 800px; height: 600px;">#}
+    <p>
+        <img src="/media/images/beach.PNG" style="display: block; margin-left: auto; margin-right: auto; width: 100%;" onclick="playmusic">
+        <audio id="myAudio" src="/media/audio/calm_music.mp3" type="audio/mp3" controls></audio>
+    </p>
+
+
+
+
+<div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
+  <div style="text-align: center;">
+    <h1 style="margin-bottom: 20px;">What is Offered</h1>
+    <ul style="list-style-type: none; padding: 0;">
+      <li style="margin-bottom: 10px; font-size: 20px;">Customizable Meditations</li>
+      <li style="margin-bottom: 10px; font-size: 20px;">Inspiring Quotes</li>
+      <li style="margin-bottom: 10px; font-size: 20px;">Relaxing Music and Images</li>
+      <li style="margin-bottom: 10px; font-size: 20px;">A Digital Space for Peace</li>
+    </ul>
+  </div>
+</div>
+
+        {% if meditation.meditation_image %}
+            <img src="{{ meditation.meditation_image.url }}">
+        {% endif %}
+
+</div>
+</body>
+{% endblock %}
+</html>
