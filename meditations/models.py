@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 
 class Meditation(models.Model):
@@ -30,6 +31,9 @@ class User(models.Model):
     email = models.EmailField()
     password = models.CharField(max_length=20)
     registration_date = models.DateField(auto_now_add=True)
+    # User = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+
+
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
@@ -56,3 +60,11 @@ class About(models.Model):
     about_page_ID = models.AutoField(primary_key=True)
     creator_ID = models.DateField(auto_now_add=True)
     user_ID = models.CharField(max_length=100)
+
+class Profile(models.Model):
+    profile_page_ID = models.AutoField(primary_key=True)
+    profile_ID = models.CharField(max_length=100)
+    user_ID = models.CharField(max_length=100)
+
+class ForgotPassword(models.Model):
+    forgot_page_ID = models.AutoField(primary_key=True)

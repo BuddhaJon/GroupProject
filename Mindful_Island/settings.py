@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-smm^*is0yv#eo7p_$12oa++10syjxll6uv$cr(g3+=a&k)r^ey
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'siege001.pythonanywhere.com']
 
 # Application definition
 
@@ -112,3 +112,7 @@ import os
 MEDIA_URL = 'media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/'
+
