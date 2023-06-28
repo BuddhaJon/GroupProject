@@ -1,88 +1,87 @@
+/*body {*/
+/*  font-family: Arial, sans-serif;*/
+/*  background-color: #D3D3D3;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*}*/
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #D3D3D3;
-  margin: 0;
-  padding: 0;
-}
+/*.container {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  height: 100vh;*/
+/*}*/
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
+/*.meditation-display {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  width: 90%;*/
+/*  height: 600px;*/
+/*  background-color: #fff;*/
+/*  border-radius: 10px;*/
+/*  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+/*}*/
 
-.meditation-display {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  height: 600px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+/*.meditation-display img {*/
+/*  max-width: 100%;*/
+/*  max-height: 100%;*/
+/*  border-radius: 10px;*/
+/*}*/
 
-.meditation-display img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
-}
+/*.meditation-controls {*/
+/*  margin-top: 20px;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*}*/
 
-.meditation-controls {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
+/*.meditation-controls button {*/
+/*  padding: 10px 20px;*/
+/*  margin: 0 10px;*/
+/*  font-size: 16px;*/
+/*  background-color: #4caf50;*/
+/*  color: #fff;*/
+/*  border: none;*/
+/*  border-radius: 5px;*/
+/*  cursor: pointer;*/
+/*}*/
 
-.meditation-controls button {
-  padding: 10px 20px;
-  margin: 0 10px;
-  font-size: 16px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+/*.meditation-controls button:hover {*/
+/*  background-color: #45a049;*/
+/*}*/
 
-.meditation-controls button:hover {
-  background-color: #45a049;
-}
+/*.meditation-controls input[type="file"] {*/
+/*  display: none;*/
+/*}*/
 
-.meditation-controls input[type="file"] {
-  display: none;
-}
+/*.meditation-controls label {*/
+/*  padding: 10px 20px;*/
+/*  margin: 0 10px;*/
+/*  font-size: 16px;*/
+/*  background-color: #4287f5;*/
+/*  color: #fff;*/
+/*  border: none;*/
+/*  border-radius: 5px;*/
+/*  cursor: pointer;*/
+/*}*/
 
-.meditation-controls label {
-  padding: 10px 20px;
-  margin: 0 10px;
-  font-size: 16px;
-  background-color: #4287f5;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+/*.meditation-quote {*/
+/*    margin-top: 20px;*/
+/*    text-align: center;*/
+/*    font-size: 18px;*/
+/*}*/
+/*h1{*/
+/*  text-align: center;*/
+/*}*/
 
-.meditation-quote {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 18px;
-}
-h1{
-  text-align: center;
-}
-
-ts1{
-  display: flex;
-  top: 45%;
-  justify-content: center;
-  align-items: center;
-  height: 52vh;
-}
+/*ts1{*/
+/*  display: flex;*/
+/*  top: 45%;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  height: 52vh;*/
+/*}*/
 
 
 
