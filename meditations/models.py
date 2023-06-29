@@ -24,7 +24,7 @@ class Meditation_Page(models.Model):
         return self.med_page_url
 
 
-class User(models.Model):
+class MyUser(models.Model):
     user_ID = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
@@ -44,7 +44,7 @@ class Page_Visit(models.Model):
     visit_date_time = models.DateField(auto_now_add=True)
     med_visitor_IP = models.GenericIPAddressField()
     med_page_url = models.URLField()
-    user_ID = models.CharField(max_length=100)
+    user_ID = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
     med_ID = models.CharField(max_length=100)
 
     def __str__(self):
@@ -59,12 +59,12 @@ class QuoteOfTheDay(models.Model):
 class About(models.Model):
     about_page_ID = models.AutoField(primary_key=True)
     creator_ID = models.DateField(auto_now_add=True)
-    user_ID = models.CharField(max_length=100)
+    user_ID = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
 
 class Profile(models.Model):
     profile_page_ID = models.AutoField(primary_key=True)
     profile_ID = models.CharField(max_length=100)
-    user_ID = models.CharField(max_length=100)
+    user_ID = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
 
 class ForgotPassword(models.Model):
     forgot_page_ID = models.AutoField(primary_key=True)
